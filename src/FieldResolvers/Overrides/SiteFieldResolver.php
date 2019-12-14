@@ -1,5 +1,5 @@
 <?php
-namespace PoP\UserRolesWP\FieldResolvers;
+namespace PoP\UserRolesWP\FieldResolvers\Overrides;
 
 use PoP\UserRolesWP\TypeResolvers\UserRoleTypeResolver;
 use PoP\ComponentModel\TypeResolvers\TypeResolverInterface;

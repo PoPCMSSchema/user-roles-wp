@@ -14,7 +14,7 @@ class ServiceConfiguration
             'instance_manager',
             'overrideClass',
             \PoP\UserRoles\FieldResolvers\SiteFieldResolver::class,
-            \PoP\UserRolesWP\FieldResolvers\SiteFieldResolver::class
+            \PoP\UserRolesWP\FieldResolvers\Overrides\SiteFieldResolver::class
         );
     }
 }
