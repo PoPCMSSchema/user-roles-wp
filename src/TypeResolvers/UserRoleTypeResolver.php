@@ -20,7 +20,7 @@ class UserRoleTypeResolver extends AbstractTypeResolver
         return $translationAPI->__('User roles', 'user-roles');
     }
 
-    public function getId($resultItem)
+    public function getID($resultItem)
     {
         $role = $resultItem;
         return $role->name;
