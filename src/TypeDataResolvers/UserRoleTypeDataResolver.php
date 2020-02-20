@@ -10,4 +10,14 @@ class UserRoleTypeDataResolver implements UserRoleTypeDataResolverInterface
         $userRoles = \wp_roles();
         return array_keys($userRoles->roles);
     }
+
+    public function getUserRoles($userObjectOrID): array
+    {
+        if (is_object($userObjectOrID)) {
+            $user = $userObjectOrID;
+        } else {
+            $user = \get_user_by('id', $userObjectOrID);
+        }
+        return $user->roles;
+    }
 }
