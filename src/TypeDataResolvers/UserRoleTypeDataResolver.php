@@ -5,6 +5,11 @@ use PoP\UserRoles\TypeDataResolvers\UserRoleTypeDataResolverInterface;
 
 class UserRoleTypeDataResolver implements UserRoleTypeDataResolverInterface
 {
+    public function getAdminRoleName(): string
+    {
+        return 'administrator';
+    }
+
     public function getRoleNames(): array
     {
         $userRoles = \wp_roles();
