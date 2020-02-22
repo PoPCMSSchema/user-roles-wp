@@ -13,10 +13,15 @@ class ServiceConfiguration
         ContainerBuilderUtils::injectValuesIntoService(
             'instance_manager',
             'overrideClass',
-            \PoP\UserRoles\FieldResolvers\SiteFieldResolver::class,
-            \PoP\UserRolesWP\FieldResolvers\Overrides\SiteFieldResolver::class
+            \PoP\UserRoles\FieldResolvers\RootRolesFieldResolver::class,
+            \PoP\UserRolesWP\FieldResolvers\Overrides\RootRolesFieldResolver::class
         );
-
+        ContainerBuilderUtils::injectValuesIntoService(
+            'instance_manager',
+            'overrideClass',
+            \PoP\UserRoles\FieldResolvers\SiteRolesFieldResolver::class,
+            \PoP\UserRolesWP\FieldResolvers\Overrides\SiteRolesFieldResolver::class
+        );
         ContainerBuilderUtils::injectValuesIntoService(
             'instance_manager',
             'overrideClass',

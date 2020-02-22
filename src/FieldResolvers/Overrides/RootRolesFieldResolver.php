@@ -4,7 +4,7 @@ namespace PoP\UserRolesWP\FieldResolvers\Overrides;
 use PoP\UserRolesWP\TypeResolvers\UserRoleTypeResolver;
 use PoP\ComponentModel\TypeResolvers\TypeResolverInterface;
 
-class SiteFieldResolver extends \PoP\UserRoles\FieldResolvers\SiteFieldResolver
+class RootRolesFieldResolver extends \PoP\UserRoles\FieldResolvers\RootRolesFieldResolver
 {
     public function resolveFieldTypeResolverClass(TypeResolverInterface $typeResolver, string $fieldName, array $fieldArgs = []): ?string
     {
