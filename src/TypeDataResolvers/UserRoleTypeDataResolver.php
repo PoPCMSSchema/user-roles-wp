@@ -16,6 +16,22 @@ class UserRoleTypeDataResolver implements UserRoleTypeDataResolverInterface
         return array_keys($userRoles->roles);
     }
 
+    public function getCapabilities(): array
+    {
+        /**
+         * Merge all capabilities from all roles
+         */
+        $capabilities = [];
+        $roles = \wp_roles();
+        foreach ($roles->roles as $role) {
+            $capabilities = array_merge(
+                $capabilities,
+                array_keys($role['capabilities'])
+            );
+        }
+        return array_values(array_unique($capabilities));
+    }
+
     public function getUserRoles($userObjectOrID): array
     {
         if (is_object($userObjectOrID)) {
