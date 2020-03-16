@@ -6,3 +6,7 @@ services:
     PoP\UserRolesWP\FieldResolvers\:
         resource: '../src/FieldResolvers/*'
         public: true
+
+    PoP\UserRolesWP\TypeResolvers\:
+        resource: '../src/TypeResolvers/*'
+        public: true
