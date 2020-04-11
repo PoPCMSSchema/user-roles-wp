@@ -19,12 +19,6 @@ class ServiceConfiguration
         ContainerBuilderUtils::injectValuesIntoService(
             'instance_manager',
             'overrideClass',
-            \PoP\UserRoles\FieldResolvers\SiteRolesFieldResolver::class,
-            \PoP\UserRolesWP\FieldResolvers\Overrides\SiteRolesFieldResolver::class
-        );
-        ContainerBuilderUtils::injectValuesIntoService(
-            'instance_manager',
-            'overrideClass',
             \PoP\UserRoles\FieldResolvers\UserFieldResolver::class,
             \PoP\UserRolesWP\FieldResolvers\Overrides\UserFieldResolver::class
         );
