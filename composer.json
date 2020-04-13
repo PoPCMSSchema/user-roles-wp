@@ -19,8 +19,8 @@
     "prefer-stable": true,
     "require": {
         "php" : "~7.1",
-        "getpop/user-roles": "^1.0@dev",
-        "getpop/users-wp": "^1.0@dev"
+        "getpop/user-roles": "~0.1",
+        "getpop/users-wp": "~0.1"
     },
     "require-dev": {
         "phpunit/phpunit" : ">=7.0",
