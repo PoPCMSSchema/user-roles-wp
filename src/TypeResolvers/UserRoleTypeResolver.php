@@ -1,4 +1,7 @@
 <?php
+
+declare(strict_types=1);
+
 namespace PoP\UserRolesWP\TypeResolvers;
 
 use PoP\Translation\Facades\TranslationAPIFacade;

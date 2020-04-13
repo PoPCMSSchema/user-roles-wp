@@ -1,4 +1,7 @@
 <?php
+
+declare(strict_types=1);
+
 namespace PoP\UserRolesWP\FieldResolvers\Overrides;
 
 use PoP\UserRolesWP\FieldResolvers\Overrides\RolesFieldResolverTrait;
