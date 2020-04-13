@@ -31,8 +31,6 @@ $ composer require getpop/user-roles-wp dev-master
 }
 ```
 
-([PoP](https://github.com/leoloso/PoP) must be installed)
-
 <!--
 ## Usage
 
