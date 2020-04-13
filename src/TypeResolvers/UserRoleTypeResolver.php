@@ -31,4 +31,3 @@ class UserRoleTypeResolver extends AbstractTypeResolver
         return UserRoleTypeDataLoader::class;
     }
 }
-
