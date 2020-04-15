@@ -45,8 +45,7 @@
     "scripts": {
         "test": "phpunit",
         "check-style": "phpcs src tests",
-        "fix-style": "phpcbf src tests",
-        "analyse": "phpstan analyse -c phpstan.neon.dist"
+        "fix-style": "phpcbf src tests"
     },
     "extra": {
         "branch-alias": {
