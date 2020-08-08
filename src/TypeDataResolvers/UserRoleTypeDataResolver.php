@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace PoP\UserRolesWP\TypeDataResolvers;
+namespace PoPSchema\UserRolesWP\TypeDataResolvers;
 
-use PoP\UserRoles\TypeDataResolvers\UserRoleTypeDataResolverInterface;
+use PoPSchema\UserRoles\TypeDataResolvers\UserRoleTypeDataResolverInterface;
 
 class UserRoleTypeDataResolver implements UserRoleTypeDataResolverInterface
 {

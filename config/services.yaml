@@ -1,4 +1,4 @@
 services:
     user_role_type_data_resolver:
-        class: \PoP\UserRolesWP\TypeDataResolvers\UserRoleTypeDataResolver
+        class: \PoPSchema\UserRolesWP\TypeDataResolvers\UserRoleTypeDataResolver
         public: true

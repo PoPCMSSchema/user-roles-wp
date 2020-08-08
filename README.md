@@ -17,7 +17,7 @@ Implementation for WordPress of contracts from package "User Roles"
 Via Composer
 
 ``` bash
-composer require getpop/user-roles-wp
+composer require pop-schema/user-roles-wp
 ```
 
 ## Usage
@@ -26,7 +26,7 @@ Initialize the component:
 
 ``` php
 \PoP\Root\ComponentLoader::initializeComponents([
-    \PoP\UserRolesWP\Component::class,
+    \PoPSchema\UserRolesWP\Component::class,
 ]);
 ```
 
@@ -61,17 +61,17 @@ If you discover any security related issues, please email leo@getpop.org instead
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
-[ico-version]: https://img.shields.io/packagist/v/getpop/user-roles-wp.svg?style=flat-square
+[ico-version]: https://img.shields.io/packagist/v/pop-schema/user-roles-wp.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/getpop/user-roles-wp/master.svg?style=flat-square
-[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/getpop/user-roles-wp.svg?style=flat-square
-[ico-code-quality]: https://img.shields.io/scrutinizer/g/getpop/user-roles-wp.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/getpop/user-roles-wp.svg?style=flat-square
+[ico-travis]: https://img.shields.io/travis/pop-schema/user-roles-wp/master.svg?style=flat-square
+[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/pop-schema/user-roles-wp.svg?style=flat-square
+[ico-code-quality]: https://img.shields.io/scrutinizer/g/pop-schema/user-roles-wp.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/pop-schema/user-roles-wp.svg?style=flat-square
 
-[link-packagist]: https://packagist.org/packages/getpop/user-roles-wp
-[link-travis]: https://travis-ci.org/getpop/user-roles-wp
-[link-scrutinizer]: https://scrutinizer-ci.com/g/getpop/user-roles-wp/code-structure
-[link-code-quality]: https://scrutinizer-ci.com/g/getpop/user-roles-wp
-[link-downloads]: https://packagist.org/packages/getpop/user-roles-wp
+[link-packagist]: https://packagist.org/packages/pop-schema/user-roles-wp
+[link-travis]: https://travis-ci.org/pop-schema/user-roles-wp
+[link-scrutinizer]: https://scrutinizer-ci.com/g/pop-schema/user-roles-wp/code-structure
+[link-code-quality]: https://scrutinizer-ci.com/g/pop-schema/user-roles-wp
+[link-downloads]: https://packagist.org/packages/pop-schema/user-roles-wp
 [link-author]: https://github.com/leoloso
 [link-contributors]: ../../contributors

@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace PoP\UserRolesWP\FieldResolvers\Overrides;
+namespace PoPSchema\UserRolesWP\FieldResolvers\Overrides;
 
-use PoP\UserRolesWP\FieldResolvers\Overrides\RolesFieldResolverTrait;
+use PoPSchema\UserRolesWP\FieldResolvers\Overrides\RolesFieldResolverTrait;
 
-class RootRolesFieldResolver extends \PoP\UserRoles\FieldResolvers\RootRolesFieldResolver
+class RootRolesFieldResolver extends \PoPSchema\UserRoles\FieldResolvers\RootRolesFieldResolver
 {
     use RolesFieldResolverTrait;
 }

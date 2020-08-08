@@ -1,8 +1,8 @@
 services:
-    PoP\UserRolesWP\FieldResolvers\:
+    PoPSchema\UserRolesWP\FieldResolvers\:
         resource: '../src/FieldResolvers/*'
         public: true
 
-    PoP\UserRolesWP\TypeResolvers\:
+    PoPSchema\UserRolesWP\TypeResolvers\:
         resource: '../src/TypeResolvers/*'
         public: true

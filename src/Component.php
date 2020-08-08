@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace PoP\UserRolesWP;
+namespace PoPSchema\UserRolesWP;
 
 use PoP\Root\Component\AbstractComponent;
 use PoP\Root\Component\YAMLServicesTrait;
-use PoP\UserRolesWP\Config\ServiceConfiguration;
+use PoPSchema\UserRolesWP\Config\ServiceConfiguration;
 use PoP\ComponentModel\Container\ContainerBuilderUtils;
 
 /**
@@ -20,8 +20,8 @@ class Component extends AbstractComponent
     public static function getDependedComponentClasses(): array
     {
         return [
-            \PoP\UserRoles\Component::class,
-            \PoP\UsersWP\Component::class,
+            \PoPSchema\UserRoles\Component::class,
+            \PoPSchema\UsersWP\Component::class,
         ];
     }
 
@@ -33,7 +33,7 @@ class Component extends AbstractComponent
     public static function getDependedConditionalComponentClasses(): array
     {
         return [
-            \PoP\UserStateWP\Component::class,
+            \PoPSchema\UserStateWP\Component::class,
         ];
     }
 

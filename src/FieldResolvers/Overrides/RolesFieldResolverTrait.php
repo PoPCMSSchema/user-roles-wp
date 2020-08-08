@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace PoP\UserRolesWP\FieldResolvers\Overrides;
+namespace PoPSchema\UserRolesWP\FieldResolvers\Overrides;
 
 use PoP\ComponentModel\Schema\SchemaDefinition;
 use PoP\ComponentModel\Schema\TypeCastingHelpers;
-use PoP\UserRolesWP\TypeResolvers\UserRoleTypeResolver;
+use PoPSchema\UserRolesWP\TypeResolvers\UserRoleTypeResolver;
 use PoP\ComponentModel\TypeResolvers\TypeResolverInterface;
 
 trait RolesFieldResolverTrait

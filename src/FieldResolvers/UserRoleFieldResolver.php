@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace PoP\UserRolesWP\FieldResolvers;
+namespace PoPSchema\UserRolesWP\FieldResolvers;
 
 use PoP\ComponentModel\Schema\SchemaDefinition;
 use PoP\ComponentModel\Schema\TypeCastingHelpers;
 use PoP\Translation\Facades\TranslationAPIFacade;
-use PoP\UserRolesWP\TypeResolvers\UserRoleTypeResolver;
+use PoPSchema\UserRolesWP\TypeResolvers\UserRoleTypeResolver;
 use PoP\ComponentModel\TypeResolvers\TypeResolverInterface;
 use PoP\ComponentModel\FieldResolvers\AbstractReflectionPropertyFieldResolver;
 

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace PoP\UserRolesWP\TypeResolvers;
+namespace PoPSchema\UserRolesWP\TypeResolvers;
 
 use PoP\Translation\Facades\TranslationAPIFacade;
-use PoP\UserRolesWP\TypeDataLoaders\UserRoleTypeDataLoader;
+use PoPSchema\UserRolesWP\TypeDataLoaders\UserRoleTypeDataLoader;
 use PoP\ComponentModel\TypeResolvers\AbstractTypeResolver;
 
 class UserRoleTypeResolver extends AbstractTypeResolver

@@ -1,12 +1,12 @@
 {
-    "name": "getpop/user-roles-wp",
+    "name": "pop-schema/user-roles-wp",
     "type": "library",
     "description": "Implementation for WordPress of contracts from package \"User Roles\"",
     "keywords": [
         "PoP",
         "user-roles-wp"
     ],
-    "homepage": "https://github.com/getpop/user-roles-wp",
+    "homepage": "https://github.com/pop-schema/user-roles-wp",
     "license": "MIT",
     "authors": [
         {
@@ -19,26 +19,26 @@
     "prefer-stable": true,
     "require": {
         "php": "~7.2",
-        "getpop/user-roles": "dev-master",
-        "getpop/users-wp": "dev-master"
+        "pop-schema/user-roles": "dev-master",
+        "pop-schema/users-wp": "dev-master"
     },
     "require-dev": {
-        "getpop/user-state-wp": "dev-master",
+        "pop-schema/user-state-wp": "dev-master",
         "phpunit/phpunit": ">=8.5",
         "squizlabs/php_codesniffer": "^3.0",
         "szepeviktor/phpstan-wordpress": "^0.6.2"
     },
     "suggest": {
-        "getpop/user-state-wp": "Integration with User State"
+        "pop-schema/user-state-wp": "Integration with User State"
     },
     "autoload": {
         "psr-4": {
-            "PoP\\UserRolesWP\\": "src"
+            "PoPSchema\\UserRolesWP\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "PoP\\UserRolesWP\\": "tests"
+            "PoPSchema\\UserRolesWP\\": "tests"
         }
     },
     "scripts": {
