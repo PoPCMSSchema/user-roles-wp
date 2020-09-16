@@ -18,15 +18,17 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "php": "~7.2",
+        "php": "~7.4",
         "pop-schema/user-roles": "dev-master",
         "pop-schema/users-wp": "dev-master"
     },
     "require-dev": {
         "pop-schema/user-state-wp": "dev-master",
-        "phpunit/phpunit": ">=8.5",
+        "phpunit/phpunit": ">=9.3",
+        "rector/rector": "dev-master#59547a5cbe7845c2ca493ede481e1141e53df079",
         "squizlabs/php_codesniffer": "^3.0",
-        "szepeviktor/phpstan-wordpress": "^0.6.2"
+        "szepeviktor/phpstan-wordpress": "^0.6.2",
+        "johnpbloch/wordpress": ">=5.5"
     },
     "suggest": {
         "pop-schema/user-state-wp": "Integration with User State"
@@ -45,9 +47,11 @@
         "test": "phpunit",
         "check-style": "phpcs src tests",
         "fix-style": "phpcbf src tests",
-        "analyse": "phpstan analyse -c phpstan.neon.dist"
+        "analyse": "phpstan analyse -c phpstan.neon.dist",
+        "downgrade-code": "rector process --dry-run"
     },
     "extra": {
+        "wordpress-install-dir": "vendor/wordpress/wordpress",
         "branch-alias": {
             "dev-master": "1.0-dev"
         }
