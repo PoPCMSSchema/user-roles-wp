@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace PoPSchema\UserRolesWP\TypeDataResolvers;
 
-use PoPSchema\UserRoles\TypeDataResolvers\UserRoleTypeDataResolverInterface;
+use PoPSchema\UserRoles\TypeDataResolvers\AbstractUserRoleTypeDataResolver;
 
-class UserRoleTypeDataResolver implements UserRoleTypeDataResolverInterface
+class UserRoleTypeDataResolver extends AbstractUserRoleTypeDataResolver
 {
     public function getAdminRoleName(): string
     {
@@ -57,5 +57,15 @@ class UserRoleTypeDataResolver implements UserRoleTypeDataResolverInterface
             );
         }
         return array_values(array_unique($capabilities));
+    }
+
+    public function getTheUserRole($userObjectOrID)
+    {
+        return \get_the_user_role($userObjectOrID);
+    }
+
+    public function userCan($userObjectOrID, $capability)
+    {
+        return \user_can($userObjectOrID, $capability);
     }
 }
