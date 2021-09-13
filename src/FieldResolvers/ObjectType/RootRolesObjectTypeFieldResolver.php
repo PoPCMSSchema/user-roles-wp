@@ -8,15 +8,18 @@ use PoP\ComponentModel\FieldResolvers\ObjectType\AbstractObjectTypeFieldResolver
 use PoP\ComponentModel\Schema\SchemaDefinition;
 use PoP\ComponentModel\Schema\SchemaTypeModifiers;
 use PoP\ComponentModel\TypeResolvers\ObjectType\ObjectTypeResolverInterface;
+use PoP\Engine\TypeResolvers\ObjectType\RootTypeResolver;
 use PoPSchema\UserRoles\Facades\UserRoleTypeAPIFacade;
-use PoPSchema\Users\TypeResolvers\ObjectType\UserTypeResolver;
+use PoPSchema\UserRoles\FieldResolvers\ObjectType\RolesObjectTypeFieldResolverTrait;
 
-class UserFieldResolver extends AbstractObjectTypeFieldResolver
+class RootRolesObjectTypeFieldResolver extends AbstractObjectTypeFieldResolver
 {
+    use RolesObjectTypeFieldResolverTrait;
+
     public function getObjectTypeResolverClassesToAttachTo(): array
     {
         return [
-            UserTypeResolver::class,
+            RootTypeResolver::class,
         ];
     }
 
@@ -42,6 +45,14 @@ class UserFieldResolver extends AbstractObjectTypeFieldResolver
         return $types[$fieldName] ?? parent::getSchemaFieldType($objectTypeResolver, $fieldName);
     }
 
+    public function getSchemaFieldDescription(ObjectTypeResolverInterface $objectTypeResolver, string $fieldName): ?string
+    {
+        $descriptions = [
+            'roleNames' => $this->translationAPI->__('All user role names', 'user-roles'),
+        ];
+        return $descriptions[$fieldName] ?? parent::getSchemaFieldDescription($objectTypeResolver, $fieldName);
+    }
+
     public function getSchemaFieldTypeModifiers(ObjectTypeResolverInterface $objectTypeResolver, string $fieldName): ?int
     {
         return match ($fieldName) {
@@ -52,14 +63,6 @@ class UserFieldResolver extends AbstractObjectTypeFieldResolver
             default
                 => parent::getSchemaFieldTypeModifiers($objectTypeResolver, $fieldName),
         };
-    }
-
-    public function getSchemaFieldDescription(ObjectTypeResolverInterface $objectTypeResolver, string $fieldName): ?string
-    {
-        $descriptions = [
-            'roleNames' => $this->translationAPI->__('User role names', 'user-roles'),
-        ];
-        return $descriptions[$fieldName] ?? parent::getSchemaFieldDescription($objectTypeResolver, $fieldName);
     }
 
     /**
@@ -78,10 +81,9 @@ class UserFieldResolver extends AbstractObjectTypeFieldResolver
         array $options = []
     ): mixed {
         $userRoleTypeAPI = UserRoleTypeAPIFacade::getInstance();
-        $user = $resultItem;
         switch ($fieldName) {
             case 'roleNames':
-                return $userRoleTypeAPI->getUserRoles($user);
+                return $userRoleTypeAPI->getRoleNames();
         }
 
         return parent::resolveValue($objectTypeResolver, $resultItem, $fieldName, $fieldArgs, $variables, $expressions, $options);
