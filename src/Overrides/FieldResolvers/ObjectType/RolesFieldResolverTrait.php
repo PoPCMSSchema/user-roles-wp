@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace PoPSchema\UserRolesWP\Overrides\FieldResolvers;
+namespace PoPSchema\UserRolesWP\Overrides\FieldResolvers\ObjectType;
 
 use PoP\ComponentModel\TypeResolvers\ObjectType\ObjectTypeResolverInterface;
 use PoPSchema\UserRolesWP\TypeResolvers\ObjectType\UserRoleTypeResolver;
