@@ -4,14 +4,15 @@ declare(strict_types=1);
 
 namespace PoPSchema\UserRolesWP\Hooks;
 
-use PoP\BasicService\AbstractHookSet;
+use PoP\Root\App;
+use PoP\Root\Hooks\AbstractHookSet;
 use PoPSchema\UsersWP\TypeAPIs\UserTypeAPI;
 
 class QueryHookSet extends AbstractHookSet
 {
     protected function init(): void
     {
-        $this->getHooksAPI()->addFilter(
+        App::addFilter(
             UserTypeAPI::HOOK_QUERY,
             [$this, 'convertUsersQuery'],
             10,
