@@ -25,9 +25,13 @@ class UserRoleObjectTypeFieldResolver extends AbstractReflectionPropertyObjectTy
     }
     final protected function getStringScalarTypeResolver(): StringScalarTypeResolver
     {
+        /** @var StringScalarTypeResolver */
         return $this->stringScalarTypeResolver ??= $this->instanceManager->getInstance(StringScalarTypeResolver::class);
     }
 
+    /**
+     * @return array<class-string<ObjectTypeResolverInterface>>
+     */
     public function getObjectTypeResolverClassesToAttachTo(): array
     {
         return [
@@ -40,6 +44,9 @@ class UserRoleObjectTypeFieldResolver extends AbstractReflectionPropertyObjectTy
         return WP_Role::class;
     }
 
+    /**
+     * @return string[]
+     */
     public function getAdminFieldNames(): array
     {
         $adminFieldNames = parent::getAdminFieldNames();
