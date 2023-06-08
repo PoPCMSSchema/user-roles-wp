@@ -7,8 +7,8 @@ namespace PoPCMSSchema\UserRolesWP;
 use PoP\ComponentModel\AbstractModuleTestCase;
 
 /**
- * Made abstract (and renamed) to disable the test
+ * Renamed to disable the test
  */
-abstract class ModuleTest_ extends AbstractModuleTestCase
+class ModuleTestDisabled extends AbstractModuleTestCase
 {
 }
